@@ -52,14 +52,14 @@ pizza = pizza + 1; a bad way to do it
 onion--; */
 
 // // Decrement x, increment y and print both of them.
-var x = 2 ;
-var y = 3 ;
+var x = 2;
+var y = 3;
 x--;
 y++;
 document.write("<br>");
 document.write("var x = 2 ; var y = 3 ;");
 document.write("<br>");
-document.write(" x--; " + x );
+document.write(" x--; " + x);
 document.write("<br>");
 document.write("y++; " + y);
 
@@ -128,25 +128,24 @@ x != y
 document.write("<br>");
 document.write("<p>var x =23; <br>var y = 43;<br>if(x>y){<br> document.write('x is greater than y')<br>}<br>else{<br>document.write('x isn’t greater than y')<br>}<br> print answer <br> = ");
 
-var x =23;
+var x = 23;
 var y = 43;
 
-if(x>y){
-    document.write("x is greater than y")
-}
-else{
-	document.write("x isn't greater than y")
+if (x > y) {
+  document.write("x is greater than y")
+} else {
+  document.write("x isn't greater than y")
 }
 
 // lists Arrays
 
-var wish1= "Swim in the world's largest swimming pool";
+var wish1 = "Swim in the world's largest swimming pool";
 var wish2 = "Do skydiving";
 // etc
 
 /*Array is a special variable which lets us store multiple values in a single variable. Starting at 0 then 1 ,2,3,4,5. This array size is 6*/
 document.write("<br>");
-var y =  7;
+var y = 7;
 var arr_items = [y, wish1, wish2]; // invalid array Crux: An array can only hold variables of the same type.
 document.write(arr_items);
 
@@ -160,32 +159,32 @@ document.write(arr_items[2]);
 document.write("<br>");
 
 // Create an array with names of students from a class.
- var students = ["Ashley", "John", "Tim", "Mac", "Wesley"];
- //                0         1       2      3       4 
- document.write("<br>");
- document.write(students[0]);
- document.write("<br>");
- console.log(students[1]);
- document.write(students[2]);
- document.write("<br>");
- console.log(students[3]);
- document.write(students[4]);
- document.write("<br>");
- document.write("<br>");
+var students = ["Ashley", "John", "Tim", "Mac", "Wesley"];
+//                0         1       2      3       4 
+document.write("<br>");
+document.write(students[0]);
+document.write("<br>");
+console.log(students[1]);
+document.write(students[2]);
+document.write("<br>");
+console.log(students[3]);
+document.write(students[4]);
+document.write("<br>");
+document.write("<br>");
 
- //repeat stuff in programming.
+//repeat stuff in programming.
 
- //Looping is basically repeating a sequence of instructions until a condition is satisfied.
+//Looping is basically repeating a sequence of instructions until a condition is satisfied.
 
- var x = "I love javascript"
- var y = 1;
+var x = "I love javascript"
+var y = 1;
 
- for(var i = 0; i < 10; i++){
-    document.write(x + " " + y++);
-    document.write("<br>");
- }
+for (var i = 0; i < 10; i++) {
+  document.write(x + " " + y++);
+  document.write("<br>");
+}
 
- /* 
+/* 
  Let’s consider the previous example and try printing “I love JavaScript”, ten times.
 We’ll start by creating a variable.
  var i ;
@@ -201,11 +200,11 @@ document.write("<br>");
 document.write("<br>");
 var q = 1;
 var t = 1;
-do{
-    document.write(x + " " + t++); 
-    document.write("<br>");
-    q = q + 1;
-    
+do {
+  document.write(x + " " + t++);
+  document.write("<br>");
+  q = q + 1;
+
 } while (q <= 10);
 
 
@@ -223,13 +222,13 @@ Confirm Dialog Box
 
 */
 
-window.alert("Some alert messages Ok");
-alert("Some alert message without window.alert()");
+// window.alert("Some alert messages Ok");
+// alert("Some alert message without window.alert()");
 
-window.prompt("A prompt message box. Just put in ok ");
-prompt("without window.prompt()")
-window.confirm("A confirm box");
-confirm("A confirm box without window.confirm()");
+// window.prompt("A prompt message box. Just put in ok ");
+// prompt("without window.prompt()")
+// window.confirm("A confirm box");
+// confirm("A confirm box without window.confirm()");
 
 document.write("<br>");
 document.write("<br>");
@@ -241,7 +240,7 @@ Once we’re done with it, we write the reusable code inside the curly brackets.
 */
 
 function print() {
-	document.write("I know javascript this was done with a function");
+  document.write("I know javascript this was done with a function");
 }
 print();
 document.write("<br>");
@@ -249,13 +248,58 @@ document.write("<br>");
 /*
 Parameters are passed while calling the functions and later those passed parameter can be manipulated inside the functions. 
 */
-function addtionCode(num1 ,num2){
-    document.write("<br>");
-    var result = num1 + num2;
-    
-    document.write(result)
-    
+function addtionCode(num1, num2) {
+  document.write("<br>");
+  var result = num1 + num2;
+
+  document.write(result)
+
 }
 document.write("Below is addtionCode(5,6) function");
 document.write("<br>");
-addtionCode(5,6);
+addtionCode(5, 6);
+
+document.write("<br>");
+
+var a = 0, b = 1, c = 0;
+document.write("Fibonacci Series<br>");
+
+while (b <= 20) {
+
+  document.write(c);
+  document.write("<br/>");
+  c = a + b;
+  a = b;
+  b = c;
+
+}
+
+
+function Palindrome() {
+
+  var revStr = "";
+  var str = document.getElementById("str").value;
+  var i = str.length;
+
+  for (var j = i; j >= 0; j--) {
+
+    revStr = revStr + str.charAt(j);
+
+  }
+
+  if (str == "") {
+
+    alert("Please Enter a number or some text");
+
+  }
+  
+  else if (str == revStr) {
+
+    alert(str + " is Palindrome");
+
+  } else {
+
+    alert(str + " is not a Palindrome");
+
+  }
+}
