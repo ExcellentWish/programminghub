@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADvanced js</title>
+</head>
+<body>
+    <h1> Advance JS with Programming hub</h1>
+
+    <p>// Let’s write a function localFunction and declare a variable localVar inside it.
+        <br>
+        <br>
+        function localFunction(){<br>
+            <br>
+            var localVar = 50; //Here, localVar is a variable whose scope is limited to the function localFunction.<br>
+            console.log(localVar);
+            <br><br>
+            document.write(localVar);
+        }
+        <br>
+        <br>
+        
+        localFunction();
+        <br>
+        var globalVar = 5;
+        <br>
+        <br>
+        
+        function globalFunction(){
+            //Here, globalVar is a variable whose scope is accessed thoughout the program.
+            console.log(globalVar);
+            document.write("br");
+            document.write(globalVar);
+        }
+        <br>
+        globalFunction();
+        <br>
+        function someFunction(){
+        
+              var a = 6;
+            console.log(a);
+        }
+        <br>
+        document.write("br");<br>
+        someFunction();<br>
+        document.write("br");<br>
+        var newStr = "Hey! I am a string.";<br>
+        document.write("br");<br>
+        document.write(newStr);<br>
+        document.write("br");<br>
+        <br>
+        // Finding the length of the string.  we use the built in length property.<br>
+        
+        var newStr1 = "HeyString";<br>
+        
+        var strLength = newStr1.length;<br>
+        
+        document.write(strLength);<br>
+        
+        // Joining two strings concat() method is used.  string1.concat(string2);<br>
+        document.write("br");<br>
+        var conCatStr = newStr.concat(newStr1);<br>
+        <br>
+        document.write(conCatStr);
+        <br>
+        Finding a substring
+        substr() method is used to extract a substring from a string.</p>
+
+        <br>
+        <p> // Converting string to uppercase and lowercase<br>
+            //toUpperCase() method is used to convert a string to uppercase.<br>
+            // toLowerCase() method is used to convert a string to lowercase.<br>
+           
+           
+            document.write("<br>");<br>
+            var myString = "Don't mess with my case.";<br>
+           
+            myString.toUpperCase();<br>
+           
+            document.write(  myString.toUpperCase());</p><br>
+
+    <script src="advancejs.js"></script>
+</body>
+</html>
