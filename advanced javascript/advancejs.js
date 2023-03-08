@@ -196,3 +196,53 @@ These properties are written in the form of key-value pairs.
 There are three ways to define an object: Using an object literal, using the new keyword and using object constructor.
 There are two ways to access properties of the object using a dot operator and using bracket notation.
 */
+
+//The date object
+// This will create a instance of the Date object
+var myDate = new Date();
+var dayMonth = new Date().getDate();
+var month = new Date().getMonth() + 1; // in an index
+
+
+document.write("<br>");
+document.write("<p>Below is myDate var. it should it should display date and time </p>");
+document.write("<br>");
+document.write(myDate);
+
+/*
+To get all these information, use the following methods:
+getDate() - Returns the current day of the month. A number between 1 and 31.
+getDay() - Returns the current day of the week. A number between 0 and 6.
+getTime() - Returns the number of milliseconds elapsed since January 1, 1970 which is nothing but the current time.
+getFullYear() - Returns the current year.
+getMonth() - Returns the current month of the year.
+Similarly, getMinutes(), getHours(), getSeconds() are some other methods present in the date object.
+*/
+
+document.write("<br>");
+
+document.write(dayMonth);
+
+
+
+
+document.write("<br>");
+
+document.write(month + " month");
+document.write("<br>");
+// This will create a instance of the Date object
+var myDate = new Date();
+//  This will Call the required method   using the dot operator
+myDate.getFullYear();
+
+document.write(myDate.getFullYear());
+
+/*
+To summarize
+The JavaScript date object contains methods and properties related to date and time.
+JavaScript stores dates as number of milliseconds passed since the Unix time.
+To use the methods and properties of the date object, we first create an instance of it using the new keyword.
+ var myDate = new Date();
+There are many methods which we can use to get the date, time, year, month, etc.
+Similarly, we can also set the above things using the various set methods.
+*/
