@@ -398,3 +398,42 @@ createTextNode() method is used to create a new text node.
 appendChild() method is used to append elements to another element
 setAttribute() method is used to set the value of attributes and removeAttribute() is used to remove the present attributes.
 */
+
+
+// Manipulating  CSS
+
+/* 
+We can add any CSS or change the existing CSS of any element.
+To do so we use the style property of the element.
+
+el.style.CSSProperty = value;
+
+Where el is the element, style is the property of the element, CSSProperty is the property to be manipulated and value is the value of that property.
+
+change the font-size of the text in the p tag
+*/
+
+var el = document.querySelector("p");
+
+el.style.fontSize = "20px";
+
+el.style.color = "black";
+
+// turn invisible
+// el.style.display = "none";
+
+el.style.background = "red";
+
+//On similar lines, we can change the margin, padding, border, change alignment,etc
+
+/* 
+To Summarize
+We can add any CSS or change the existing CSS of any element using JavaScript.
+
+To do so, we use the style property of the element.
+The syntax of style is
+ el.style.CSSProperty = value;
+ Where el is the element, CSSProperty is the property to be manipulated and value is the value of that property.
+
+ We can change the margin, padding, border, alignment, color, background-color, etc. Basically, everything that we can do using CSS, can be done by using JavaScript.
+*/
