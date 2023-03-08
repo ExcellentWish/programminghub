@@ -699,3 +699,86 @@ The 6th major release of ECMAScript is known as es6 and it came out in 2015.
 In ES6, we can declare variables using let and const.
 To write template strings we use backticks ``.
 */
+
+// What is a Class? Classes in JavaScript are more or less special type of functions. Classes are variables and methods bunched together.
+/*
+Methods are nothing but the functions declared inside a class.
+The members in the class can be accessed by creating the instance of the class.
+These instances of the class are nothing but the objects.
+When an object is created from a class it is known as an instance of the class.
+*/
+
+class className {
+    // this is class body
+};
+
+// And, the second way to do this is using the class expression.
+
+var varName1 = class{
+    // class body
+};
+
+// The class expressions can be named or unnamed.
+
+var varName2 = class className{
+	//This is class body -->  
+};
+
+/* 
+Constructor method is a special method in a class.
+There can only be one constructor method in a class.
+*/
+
+// class Student{
+//     // This defines a constructor for the class 
+//     constructor(name, roll_no){
+//         // This initialises the variables 
+//         this.name = name;
+//         this.roll_no = roll_no;
+//     }
+//     showName(){
+//         // This is a method to return name
+//         return  name;
+//     }
+//     showRoll(){
+//         // This is a method to return roll_no
+//         return roll_no;
+//     }
+// };
+
+/* 
+The members of the class can be accessed by creating the instance of the class.
+Objects are used to access and assign values to the variables.
+It is done using the new keyword.
+*/
+let objName = new className();
+// The new keyword instantiates the object for use.
+// ClassName() is the name of the constructor of the class.
+
+class Student{
+	// <-- This defines a constructor for the class -->
+	constructor(name,   roll_no){
+		// <-- This initialises the variables -->
+		this.name = name;
+		this.roll_no = roll_no;
+			}
+
+	// <--   This defines a method of the class -->
+	showName(){	
+			// <-- This is a method to return name -->
+			return   name;
+	}
+	// <-- This defines another method of the class -->
+	showRoll(){
+		// <-- This is a method to return roll_no   -->
+		return roll_no;
+	}
+}
+
+// <-- This creates an instance of defined class with parameters -->
+let student1 = new Student("Rahul",45);
+
+// Now we can call the function showName() and showRoll()
+
+student1.showName();
+student1.showRoll();
