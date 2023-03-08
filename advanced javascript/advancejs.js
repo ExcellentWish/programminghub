@@ -246,3 +246,48 @@ To use the methods and properties of the date object, we first create an instanc
 There are many methods which we can use to get the date, time, year, month, etc.
 Similarly, we can also set the above things using the various set methods.
 */
+
+
+// What is a DOM? or Document Object Model
+/*
+Starting from your forefather’s generation, then your grandfather’s generation, then your parents and then you.
+Similarly, browser also creates a tree, but this tree consists of HTML elements, attributes, values, content and more.
+It is a tree structure of objects created by the browser
+This tree consists of elements, attributes, values, content, basically everything that we have written in HTML.
+HTML DOM outlines a standard using which we can add, delete, get or change the elements of HTML
+
+Consider a basic HTML webpage with the following markup.
+ <html>
+	<head>
+	</head>
+	<body>
+		<p>
+		</p>
+	</body>
+</html>
+DOM looks like
+
+            Document
+            Html
+        head    body
+                h1
+                p
+
+The outer nodes are the parent nodes and the enclosed ones are the children nodes.
+<html> is at the root, then <head> and <body> are its children
+<p> becomes the child of <body>
+
+here are three identifiers by which these nodes can be identified.
+Tag name - The name of the tag
+Class - The classes attached to the nodes/elements.
+Id - The id assigned to the nodes/elements.
+
+There are certain methods which can be used to access the elements via the above identifiers.
+getElementsByTagName() - To find the elements using the tag name.
+getElementsByClassName() - To find the elements using the class assigned to the element.
+getElementById() - To find the element using the id assigned to it.
+*/
+
+document.getElementsByTagName('p'); //This will select all the tags containing the p tag
+document.getElementsByClassName('newClass'); // This will select all the elements containing the class newClass
+document.getElementById('newId'); // We can access the <p> tag with the id that is assigned to it which is newId. This will select the element containing the id - newId.
