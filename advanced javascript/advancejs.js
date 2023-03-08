@@ -612,3 +612,90 @@ We can create a cookie using following syntax
 
 
 //  ESE6.  ECMA is a standard organization for information and communication systems
+
+// Before ES6, variables were declared using var. Variables declared using var are function scoped. In ES6, we can declare variables using let and const.
+
+// let is same as the var, except it is block scoped, unlike var.
+
+/* 
+When we learnt about scope we saw that a variable declared inside a function using var isn’t available outside the function.
+But, a variable declared inside a block scope using var is still available outside the block.
+For example:
+ for(var count=0; count<5; count++) 
+ {//some action }
+ console.log(count);
+*/
+
+let variable_name = "val";
+// let is the keyword , variable_name can be any valid variable name and value is the variable value.
+
+const const_name = "value";
+// const is the keyword, const_name can be any valid variable name and value is the constant value .
+
+// It is advised to avoid the use of var and use block scoped let and const.
+
+/* 
+Remember how we write functions in JavaScript?
+ <-- This defines a function -->
+function nameOfFunction(){
+	<-- This is function body -->
+}
+
+ES6 Function
+
+The arrow function is written as
+ <-- This defines an Arrow function using Fat arrow-->
+ (parameters) => {
+	<-- This is function body -->
+}
+
+Which is same as writing
+ <-- This defines a function with Parameters -->
+ function (Parameters){
+	<-- This is function body -->
+}
+
+We can also ignore the use of curly braces if the function body is confined to one statement.
+ (parameters) => statement; 
+
+ Further, we can assign the function to a variable, so the function reference will be stored in that variable.
+ let varName = (parameters) => {
+	<-- This is function body -->
+};
+*/
+
+let varName = (parameters) => {
+	//<-- This is function body -->
+};
+
+// Template strings. Large strings and variable concatenation?
+
+/*
+To write template strings we use backticks ( ` `) instead of single or double quotes.
+ let str = `Hey! String me.`; 
+*/
+
+let str = `Hey! String me.`;
+
+/*
+Let’s see one more example:
+ <-- Declares a variable and assign an integer value -->
+let a = 5;
+<-- Declares another variable and assign a template   string value -->
+let str1 = `I am ${a} years old.`; 
+*/
+
+let a = 5;
+
+let str1 = `I am ${a} years old.`; 
+
+document.write(str1);
+
+// To Summarize
+/*
+ECMA is a standard organization for information and communication systems.
+ECMAScript is nothing but the other name of JavaScript.
+The 6th major release of ECMAScript is known as es6 and it came out in 2015.
+In ES6, we can declare variables using let and const.
+To write template strings we use backticks ``.
+*/
