@@ -5,9 +5,14 @@ function localFunction() {
     console.log(localVar);
     document.write(localVar);
 }
+br();
+
+function br(){
+    document.write("<br>");
+}
 
 localFunction();
-
+br();
 var globalVar = 5;
 
 function globalFunction() {
@@ -24,13 +29,13 @@ function someFunction() {
     var a = 6;
     console.log(a);
 }
-document.write("<br>");
+
 someFunction();
-document.write("<br>");
+br();
 var newStr = "Hey! I am a string.";
-document.write("<br>");
+br();
 document.write(newStr);
-document.write("<br>");
+br();
 // Finding the length of the string.  we use the built in length property.
 
 var newStr1 = "HeyString";
@@ -40,11 +45,11 @@ var strLength = newStr1.length;
 document.write(strLength);
 
 // Joining two strings concat() method is used.  string1.concat(string2);
-document.write("<br>");
+br();
 var conCatStr = newStr.concat(newStr1);
 
 document.write(conCatStr);
-document.write("<br>");
+br();
 //Finding a substring
 
 // substr() method is used to extract a substring from a string.
@@ -62,13 +67,13 @@ document.write(myString.substr(5, 7));
 // toLowerCase() method is used to convert a string to lowercase.
 
 
-document.write("<br>");
+br();
 var myString = "Don't mess with my case.";
 
 myString.toUpperCase();
 
 document.write(myString.toUpperCase());
-document.write("<br>");
+br();
 document.write(myString.toLowerCase());
 
 // Rounding off the numbers toFixed() method comes to rescue
@@ -95,7 +100,7 @@ document.write(newNumToStr); // 456 = "456"
 
 // Writing numbers up to a precision
 // toPrecision() method also returns a rounded off number. it takes the total number of digits as the argument
-document.write("<br>");
+br();
 var precisionNum = 5.4756
 
 var precisionNum1 = precisionNum.toPrecision(4);
@@ -219,17 +224,17 @@ getMonth() - Returns the current month of the year.
 Similarly, getMinutes(), getHours(), getSeconds() are some other methods present in the date object.
 */
 
-document.write("<br>");
+br();
 
 document.write(dayMonth);
 
 
 
 
-document.write("<br>");
+br();
 
 document.write(month + " month");
-document.write("<br>");
+br();
 // This will create a instance of the Date object
 var myDate = new Date();
 //  This will Call the required method   using the dot operator
@@ -291,3 +296,105 @@ getElementById() - To find the element using the id assigned to it.
 document.getElementsByTagName('p'); //This will select all the tags containing the p tag
 document.getElementsByClassName('newClass'); // This will select all the elements containing the class newClass
 document.getElementById('newId'); // We can access the <p> tag with the id that is assigned to it which is newId. This will select the element containing the id - newId.
+
+/* 
+To summarize
+
+DOM stands for Document Object Model.
+DOM is a tree structure of objects created by the browser.
+DOM enables us to manipulate the content or the HTML using JavaScript.
+We can access the elements by their name, by the classes attached to them or by the id assigned to them using getElementsByName(), getElementsByClassName() and getElementById() respectively.
+
+*/
+
+//Accessing HTML elements
+/* 
+Accessing HTML Elements by CSS Selectors
+CSS selectors are used to select the elements you want to style which can be id, class names, types, attributes, values of attributes, etc
+We have two methods that can be used to access HTML elements based on the specified CSS selectors.
+querySelector()  method returns only first element that matches with the specified selector
+querySelectorAll()returns all the matching elements.
+*/
+document.querySelector(".className");	//to access using class
+document.querySelector("#idName");	//to access using id
+document.querySelector("tagname");	//to access using tag name
+
+// To summarize
+
+/*
+We can access HTML content using JavaScript.
+To do so, the document object provides these methods.
+getElementsByTagName() - It returns all the elements with the tag name specified as a parameter.
+getElementsByClassName() - It returns all the elements with the class name specified as a parameter.
+getElementById() - It returns the elements with the Id specified as a parameter.
+querySelector() - It returns the first element that matches the specified CSS selector.
+querySelectorAll() - It returns all the elements that matches the specified CSS selector. 
+*/
+
+//Manipulating  HTML elements
+
+// JavaScript provides innerHTML property which can be used to set the contents of HTML.
+
+document.getElementById("lone-p").innerHTML = "Here is some text for you! From .innerHTML";
+
+document.getElementById("not-alone").innerHTML = "“Replaced you!”";
+
+document.getElementById("bold-me").innerHTML = "<b>Just like this</b>";
+
+/*
+Creating new elements
+Let us explore how to create new elements using JavaScript..
+To do so, we use the method createElement() of the document object.
+Doesn’t that sound obvious!?
+ document.createElement("p");
+*/ 
+
+//This will create a new element and store it in a variable 
+var newEl = document.createElement("p");
+// This will Create some text for new element and store it in a variable 
+var someText = document.createTextNode("Some Text Here! This is to append child"); //createTextNode() method is used to create a new text node.
+//This will insert text into newly created p element and store it in a variable
+var insertThis = newEl.appendChild(someText);
+//This will insert the p element inside the present div 
+document.getElementById("meDiv").appendChild(insertThis)
+
+// br(); document.write("<br>")
+
+
+// Remove an element. We wish to remove the p element present inside the div. To do so we have a method removeChild().
+// This will access the division with specific ID name
+var divEl = document.getElementById("thisDiv");
+//This will access the paragraph element
+var pEl = document.getElementById("thisP");
+// This will remove paragraph element from division
+divEl.removeChild(pEl);
+
+// Setting an attribute
+
+/* 
+Attributes provide additional information about the element.
+We can set the values of attributes present in the elements using JavaScript.
+This can be achieved using the setAttribute() method
+
+ setAttribute(“attribute”,”value”);
+*/
+
+var aEl = document.querySelector("a");
+
+aEl.setAttribute("href","http://google.com");
+
+// To remove any attribute we use the method removeAttribute().
+
+document.querySelector("#stack").removeAttribute("href");
+
+// The removeAttribute() method takes only the name of the attribute as an argument.
+
+// To summarize
+/* 
+innerHTML property can be used to set the contents of HTML.
+We can write HTML tags inside the value we pass to the innerHTML property.
+createElement() is used to create new elements.
+createTextNode() method is used to create a new text node.
+appendChild() method is used to append elements to another element
+setAttribute() method is used to set the value of attributes and removeAttribute() is used to remove the present attributes.
+*/
