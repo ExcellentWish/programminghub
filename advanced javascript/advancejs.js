@@ -487,3 +487,128 @@ We can write the events inline or use the addEventListener() function to add one
 Similarly, we can use removeEventListener() function to remove an attached event.
 
 */
+
+// What is BOM? BOM stands for Browser Object Model.
+
+/*
+The Browser Object Model enables JavaScript to interact with the browser.
+The Browser object model consists of an object known as window.
+The window object represents the browser window, every object is a child of the window object.
+
+                        Window
+        Document        object      Screen
+
+Even the document object is a child of the window object.
+Other than the document object, the window object also consists of many other objects.
+The screen object which contains the information about the user’s screen.
+The history object which contains the browser’s history.
+The location object which gives us access to the URL.
+The navigator object which gives us the details about visitor’s browser
+The window object stores the information about the window size of the user’s browser.
+We can find out the height and width of the browser window.
+To do so, we use the innerHeight and innerWidth properties of the window object.
+
+window.innerHeight returns the innerHeight of the browser window.
+window.innerWidth returns the innerWidth of the browser window.
+
+The screen object
+The screen object contains the information about the user’s screen.
+To access the screen object we can write:
+ window.screen or screen
+ The screen object can be written without the window, just like the document object.
+
+We can get the height, width, color depth, pixel depth and many more things using the screen object.
+To find out the height and width of the screen we can simply use
+screen.height and screen.width respectively.
+
+Remember, screen.height is similar to window.screen.height.
+
+The History object
+The history object gives us access to the history of the browser which is pretty interesting to play with.
+
+The history object provides two methods - back() and forward().
+Writing history.back() is same as pressing the back button of the browser.
+history.forward() will take the navigation forward onto the next screen.
+
+Writing history.back() is same as writing window.history.back().
+
+The location object
+Using the location object we can get details about the URL, hostname, protocol
+
+window.location.href - It returns the URL of the current page.
+window.location.hostname - It returns the domain name of the website.
+window.location.protocol - It returns the protocol of the website.
+
+The Navigator object
+This object is used to detect the browser’s information such as appName, appVersion etc.
+appName - returns the name
+appVersion-returns the version
+cookieEnabled-returns true if cookie is enabled else returns false
+online - returns true if browser is online else returns false.
+
+*/
+
+/*
+To summarize
+BOM stands for Browser Object Model.
+The Browser Object Model enables JavaScript to interact with the browser.
+The window object represents the browser window, every object is a child of the window object.
+The screen object contains the information about the user’s screen.
+The history object contains the browser’s history. 
+The location object gives us access to the url.
+*/
+
+// What are cookies?
+/*
+Cookies in JavaScript enables us to store data in the user’s browser. Cookie is a piece of data that is stored in the user’s browser.
+Like remembering your username for a particular website, so when you visit the same website again, you don’t need to type it again.
+Or storing session variables - This is used for maintaining a login session among different pages. 
+JavaScript can read, create, modify and delete cookies.
+To create a cookie following syntax is used:
+
+*/
+document.cookie = "key=value;";
+
+// We cannot create multiple cookies at once with document.cookie. To write multiple cookies
+document.cookie = "key1=value1";
+document.cookie = "key2=value2";
+// We need to write as many key-value pairs as required by using document.cookie repeatedly.
+
+/* 
+    Deleting a cookie
+By default, the cookie is deleted when the browser is closed.
+But we can also specify the expiry time manually.
+*/
+
+document.cookie = "key:value; expires:Date";
+// The expires takes Date as a value.
+// Read the cookies
+//Writing document.cookie returns the cookies which are already present.
+var myCook = document.cookie;
+
+// The above will store a string containing all the information about cookies in the variable myCook which will be in the same key-value format
+
+/*
+Change the cookie in JavaScript 
+*/
+document.cookie = "username=Rahul Saxena; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+// We can also delete the existing cookies. To do so, we need to simply write a past date in the expires field.
+
+document.cookie = "key=;expires= Past_date;";
+
+// Where key is the name of the cookie which is to be deleted. There is no need to specify the value while deleting a cookie.
+
+/* 
+        To Summarize
+Cookies in JavaScript enable us to store data in the user’s browser.
+Cookie is a piece of data that is stored in the user’s browser.
+Cookie is a small piece of data which consists of a name and value pair stored on the browser.
+We can create a cookie using following syntax
+ document.cookie = “key=value”;
+
+ We can delete a cookie by assigning the value of a past date in the expires field.
+*/
+
+
+//  ESE6.  ECMA is a standard organization for information and communication systems
