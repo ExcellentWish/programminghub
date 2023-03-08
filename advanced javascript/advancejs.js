@@ -340,6 +340,7 @@ document.getElementById("lone-p").innerHTML = "Here is some text for you! From .
 document.getElementById("not-alone").innerHTML = "“Replaced you!”";
 
 document.getElementById("bold-me").innerHTML = "<b>Just like this</b>";
+br();
 
 /*
 Creating new elements
@@ -386,6 +387,7 @@ aEl.setAttribute("href","http://google.com");
 // To remove any attribute we use the method removeAttribute().
 
 document.querySelector("#stack").removeAttribute("href");
+
 
 // The removeAttribute() method takes only the name of the attribute as an argument.
 
@@ -436,4 +438,52 @@ The syntax of style is
  Where el is the element, CSSProperty is the property to be manipulated and value is the value of that property.
 
  We can change the margin, padding, border, alignment, color, background-color, etc. Basically, everything that we can do using CSS, can be done by using JavaScript.
+*/
+
+
+// What are Events? An event is an occurence.
+/*
+Event can either occur by action of the user or by the action of the browser itself.
+Clicking a button, hovering over, resizing the browser window, pressing a key on the keyboard are events done by the user.
+Whereas, loading of the web page, resizing the browser window is an event that happens to the browser. 
+*/
+
+// Types of Events
+/* 
+onclick() - This event is fired when any HTML element is clicked.
+onload() - This event is fired when the browser finishes loading the web page.
+onkeydown() - This event occurs when any key on the keyboard is pressed.
+onmouseout() - This event occurs when the pointer is moved out of any element.
+onmouseover() - This event occurs when the pointer moves over any element.
+*/
+
+function clicked(){
+	alert('Oh! Clicked. and a function called this'); 
+}
+
+/*
+But there’s another way which allows us to attach events to the HTML elements instead of writing it directly inside the HTML element.
+This is done using the addEventListener() function.
+*/
+// This will access the button element
+var myBtn = document.querySelector('.myBtn')
+
+myBtn.addEventListener('click',function(){
+	alert("Oh! Clicked. with addEventListener");
+});
+//The addEventListener() function takes two parameters - the type of event and the function.
+
+// To remove an event attached to any HTML element, we use the function removeEventListener().
+// also takes two arguments, the event to remove and the function to perform when the event is removed.
+var myOtherBtn = document.querySelector(".myOtherBtn");
+myOtherBtn.removeEventListener('click', alert);
+
+/*
+To summarize
+
+An event is an occurence.
+Clicking a button, hovering over an element, loading of the web page, resizing the browser window, are few examples of an event.
+We can write the events inline or use the addEventListener() function to add one.
+Similarly, we can use removeEventListener() function to remove an attached event.
+
 */
