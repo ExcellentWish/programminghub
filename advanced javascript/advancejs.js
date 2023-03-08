@@ -121,3 +121,78 @@ A variable which can take either true or false as values is known as a boolean.
 Boolean variables are useful in controlling the flow of a program.
 
 */
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+// key: value and objects
+document.write("Here is a student key");
+document.write("<br>");
+// let key = { name: "Rahul"}
+
+var Students = {
+    name: "Rahual",
+    class: 10,
+    roll_No: 45,
+    grade: "A+",
+}
+
+document.write(Students);
+
+// Using the new keyword
+// var Students = new object();
+
+Students.name = "Rahual";
+
+
+// <-- This will create an object with new keyword -->
+/*var Student = new object();
+// <-- This will access the 1st item of object and assign string value -->
+Student.name = "Rahul";
+// <-- This will access the 2nd item of object and assign integer value -->
+Student.class = 10;
+// <-- This will access the 3rd item of object and assign integer value -->
+Student.roll_no = 45;
+
+// Using object constructor
+// Object constructor is a function which has the same name as the object.
+
+// function Student(name, {class}, roll_no){
+    // This will assign the userdefined values to items
+//     this.name = name;
+// 	this.class = class;
+// 	this.roll_no = roll_no;
+// }
+// This will create an object and sending values in the argument to constructor 
+
+var Student1 = new Student("John", 11, 46);
+
+//this refers to the current object.
+
+Student.name = "Rajat";
+// Will add a property house with value Green to the object.
+
+Student.house = "Green";
+
+Student['name']; // Will also return the same result as Student.name.
+
+// And, writing Student[‘name’] = “Rajat”; will assign a new value to the property name of object Student.
+
+*/
+var Car = {
+	// <-- First item -->
+	model: "Fiat ABC",
+	// <--   second item -->
+	year: 1997
+};
+
+console.log(Car.model)
+
+console.log(Car['year'])
+
+// To Summarize
+/* 
+An object is a collection of properties and methods.
+These properties are written in the form of key-value pairs.
+There are three ways to define an object: Using an object literal, using the new keyword and using object constructor.
+There are two ways to access properties of the object using a dot operator and using bracket notation.
+*/
