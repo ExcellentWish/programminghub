@@ -1,0 +1,15 @@
+/workspace/programminghub/c#/bin/Debug/net7.0/programminghub
+/workspace/programminghub/c#/bin/Debug/net7.0/programminghub.deps.json
+/workspace/programminghub/c#/bin/Debug/net7.0/programminghub.runtimeconfig.json
+/workspace/programminghub/c#/bin/Debug/net7.0/programminghub.dll
+/workspace/programminghub/c#/bin/Debug/net7.0/programminghub.pdb
+/workspace/programminghub/c#/obj/Debug/net7.0/programminghub.csproj.AssemblyReference.cache
+/workspace/programminghub/c#/obj/Debug/net7.0/programminghub.GeneratedMSBuildEditorConfig.editorconfig
+/workspace/programminghub/c#/obj/Debug/net7.0/programminghub.AssemblyInfoInputs.cache
+/workspace/programminghub/c#/obj/Debug/net7.0/programminghub.AssemblyInfo.cs
+/workspace/programminghub/c#/obj/Debug/net7.0/programminghub.csproj.CoreCompileInputs.cache
+/workspace/programminghub/c#/obj/Debug/net7.0/programminghub.dll
+/workspace/programminghub/c#/obj/Debug/net7.0/refint/programminghub.dll
+/workspace/programminghub/c#/obj/Debug/net7.0/programminghub.pdb
+/workspace/programminghub/c#/obj/Debug/net7.0/programminghub.genruntimeconfig.cache
+/workspace/programminghub/c#/obj/Debug/net7.0/ref/programminghub.dll
