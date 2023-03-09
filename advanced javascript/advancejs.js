@@ -757,7 +757,7 @@ let objName = new className();
 
 class Student{
 	// <-- This defines a constructor for the class -->
-	constructor(name,   roll_no){
+	constructor(name, roll_no){
 		// <-- This initialises the variables -->
 		this.name = name;
 		this.roll_no = roll_no;
@@ -782,3 +782,12 @@ let student1 = new Student("Rahul",45);
 
 student1.showName();
 student1.showRoll();
+
+/*
+To Summarize
+Classes in JavaScript are more or less special type of functions.
+Classes are variables and methods bunched together.
+Methods are nothing but the functions declared inside a class.
+The members in the class can be accessed by creating the instance of the class.
+Constructor is used for creating and initializing the object created with class.
+*/
